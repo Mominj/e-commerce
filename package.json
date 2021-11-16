@@ -1,0 +1,59 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "My Moleculer-based microservices project",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services/**/*.service.js",
+    "start": "moleculer-runner services/**/*.service.js",
+    "cli": "moleculer connect ",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "dc:up": "docker-compose up --build -d",
+    "dc:logs": "docker-compose logs -f",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "SwadhIn",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2",
+    "moleculer-repl": "^0.6.4"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "busboy": "^0.3.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "moleculer": "^0.14.10",
+    "moleculer-cli": "^0.7.1",
+    "moleculer-db": "^0.8.15",
+    "moleculer-mail": "^1.2.5",
+    "moleculer-web": "^0.9.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.7",
+    "multer": "^1.4.3",
+    "slugify": "^1.4.5",
+    "sslcommerz-nodejs": "^1.0.8",
+    "string-format": "^2.0.0",
+    "useragent": "^2.3.0"
+  },
+  "engines": {
+    "node": ">= 10.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}
